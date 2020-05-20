@@ -13,8 +13,6 @@ class ShopSeeder extends Seeder
      */
     public function run()
     {
-        Shop::truncate();
-
         $shops = [
             'Martha\'s Florería',
             'Florería Amore',
