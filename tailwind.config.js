@@ -28,6 +28,7 @@ module.exports = {
     variants: {
         backgroundColor: [...defaultConfig.variants.backgroundColor, 'hocus'],
         boxShadow: [...defaultConfig.variants.boxShadow, 'hocus'],
+        textDecoration: [...defaultConfig.variants.textDecoration, 'hocus'],
         textColor: [...defaultConfig.variants.textColor, 'hocus'],
         scale: [...defaultConfig.variants.scale, 'hocus'],
         zIndex: [...defaultConfig.variants.zIndex, 'hocus'],

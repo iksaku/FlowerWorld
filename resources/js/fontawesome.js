@@ -5,7 +5,7 @@ import {
     faEnvelope,
     faMapMarkerAlt,
     faPhone,
-    faShoppingBag,
+    faShoppingBag, faSyncAlt, faTimes,
     faUser
 } from '@fortawesome/free-solid-svg-icons'
 import {
@@ -19,7 +19,7 @@ library.add(
     faFacebookSquare, faWhatsappSquare, faInstagramSquare, faTwitterSquare,
     faMapMarkerAlt, faPhone, faEnvelope,
     faUser, faBars, faShoppingBag,
-    faCheckCircle
+    faCheckCircle, faTimes, faSyncAlt
 )
 
 dom.watch()

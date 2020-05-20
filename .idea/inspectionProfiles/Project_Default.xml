@@ -4,7 +4,7 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="15">
+          <list size="25">
             <item index="0" class="java.lang.String" itemvalue="wire:model.lazy" />
             <item index="1" class="java.lang.String" itemvalue="wire:click.prevent" />
             <item index="2" class="java.lang.String" itemvalue="wire:submit.prevent" />
@@ -20,10 +20,21 @@
             <item index="12" class="java.lang.String" itemvalue="x-transition:leave-start" />
             <item index="13" class="java.lang.String" itemvalue="x-transition:leave-end" />
             <item index="14" class="java.lang.String" itemvalue="wire:click" />
+            <item index="15" class="java.lang.String" itemvalue="x-init" />
+            <item index="16" class="java.lang.String" itemvalue="x-if" />
+            <item index="17" class="java.lang.String" itemvalue="@keydown.window.escape" />
+            <item index="18" class="java.lang.String" itemvalue="x-ref" />
+            <item index="19" class="java.lang.String" itemvalue=":class" />
+            <item index="20" class="java.lang.String" itemvalue="wire:model.debounce.250ms" />
+            <item index="21" class="java.lang.String" itemvalue="@keydown.ctrl.s.prevent.window" />
+            <item index="22" class="java.lang.String" itemvalue="@keydown.ctrl.p.prevent.window" />
+            <item index="23" class="java.lang.String" itemvalue="wire:loading" />
+            <item index="24" class="java.lang.String" itemvalue="wire:loading.remove" />
           </list>
         </value>
       </option>
       <option name="myCustomValuesEnabled" value="true" />
     </inspection_tool>
+    <inspection_tool class="PhpUndefinedClassInspection" enabled="false" level="WARNING" enabled_by_default="false" />
   </profile>
 </component>

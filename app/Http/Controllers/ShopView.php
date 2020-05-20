@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Shop;
 use Illuminate\Http\Request;
 
-class ShopController extends Controller
+class ShopView extends Controller
 {
     public function __invoke(Shop $shop)
     {

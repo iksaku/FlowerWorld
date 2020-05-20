@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'IndexController')->name('index');
-Route::get('shop/{shop}', 'ShopController')->name('shop');
+Route::get('/', 'IndexView')->name('index');
+Route::get('shop/{shop}', 'ShopView')->name('shop');
 
 Route::middleware('guest')->group(function () {
     Route::view('login', 'auth.login')->name('login');
@@ -22,9 +22,22 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::post('logout', 'Auth\LogoutController')->name('logout');
+    Route::post('logout', 'Auth\Logout')->name('logout');
     Route::view('password/confirm', 'auth.passwords.confirm')->name('password.confirm');
 
-    Route::view('checkout', 'checkout')->name('checkout');
-    Route::view('checkout/complete', 'checkout-complete')->name('checkout.complete');
+    Route::prefix('checkout')->name('checkout.')->group(function () {
+        Route::view('/', 'checkout')->name('index');
+        Route::view('complete', 'checkout-complete')->name('complete');
+    });
+
+    Route::prefix('dashboard')->name('dashboard.')->group(function () {
+        Route::get('/', function() {
+            return redirect()->route('dashboard.invoices.index');
+        })->name('index');
+
+        Route::prefix('invoices')->name('invoices.')->group(function () {
+            Route::view('/', 'dashboard.invoice.index')->name('index');
+            Route::get('{invoice}', 'Dashboard\InvoiceView')->name('invoice');
+        });
+    });
 });

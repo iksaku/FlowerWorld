@@ -62,7 +62,7 @@
 
                 <a
                     class="w-full block hocus:text-white text-center hocus:bg-green-500 px-4 py-2"
-                    href="{{ route('checkout') }}"
+                    href="{{ route('checkout.index') }}"
                 >
                     Proceder al Pago
                 </a>

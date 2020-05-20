@@ -12,12 +12,14 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $admin = User::updateOrCreate(['email' => 'flowerworld@gmail.com'], [
+        $admin = User::firstOrNew(['email' => 'flowerworld@gmail.com'], [
             'name' => 'Admin',
             'address' => 'México',
             'password' => Hash::make('password')
         ]);
 
         $admin->is_admin = true;
+
+        $admin->save();
     }
 }

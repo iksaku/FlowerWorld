@@ -6,7 +6,7 @@ use App\Shop;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class IndexView extends Controller
 {
     public function __invoke(): View
     {
