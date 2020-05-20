@@ -23,11 +23,15 @@ class Invoices extends Component
 
     public function render()
     {
+        /* Obtiene el usuario actualmente autenticado */
         $user = Auth::user();
 
+        /* Verifica si el usuario tiene la facultad de ver cualquier recibo */
         if ($user->can('viewAny', Invoice::class)) {
+            /* Si tiene la facultad de ver cualquier recibo, muestra la lista completa de recibos */
             $invoices = Invoice::query();
         } else {
+            /* Si no tiene la facultad necesaria, solo se muestran los recibos del mismo usuario */
             $invoices = $user->invoices();
         }
 

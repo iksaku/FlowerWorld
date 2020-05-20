@@ -18,6 +18,7 @@ class Login extends Component
 
     public function authenticate()
     {
+        /* Verifica que los datos son válidos */
         $credentials = $this->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
@@ -26,12 +27,14 @@ class Login extends Component
             'password' => 'Por favor ingresa la contrasena.'
         ]);
 
+        /* Autentica al cliente con su email y contraseña */
         if (!Auth::attempt($credentials, $this->remember)) {
             $this->addError('email', trans('auth.failed'));
 
             return;
         }
 
+        /* Redirecciona al inicio */
         redirect(route('index'));
     }
 

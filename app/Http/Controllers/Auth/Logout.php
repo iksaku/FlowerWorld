@@ -10,6 +10,7 @@ class Logout extends Controller
 {
     public function __invoke(): RedirectResponse
     {
+        /* Cierra sesión del usuario */
         Auth::logout();
 
         return redirect(route('index'));

@@ -48,6 +48,7 @@ class Product extends Model
 
     public function shop()
     {
+        /* Obtiene la tienda a la que pertenece este producto */
         return $this->belongsTo(Shop::class);
     }
 }

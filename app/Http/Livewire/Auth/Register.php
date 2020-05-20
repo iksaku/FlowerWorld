@@ -26,6 +26,7 @@ class Register extends Component
 
     public function register()
     {
+        /* Verifica que los datos son válidos */
         $this->validate([
             'name' => ['required'],
             'email' => ['required', 'email', 'unique:users'],
@@ -33,6 +34,7 @@ class Register extends Component
             'password' => ['required', 'min:8', 'same:passwordConfirmation'],
         ]);
 
+        /* Crea un nuevo usuario con los nuevos datos */
         /** @var User $user */
         $user = User::create([
             'name' => $this->name,
@@ -41,8 +43,10 @@ class Register extends Component
             'password' => Hash::make($this->password),
         ]);
 
+        /* Autentica con el nuevo usuario creado */
         Auth::login($user, true);
 
+        /* Redirecciona al inicio */
         redirect(route('index'));
     }
 

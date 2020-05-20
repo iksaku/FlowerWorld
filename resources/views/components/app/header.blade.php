@@ -1,12 +1,12 @@
-<header class="z-10 sticky inset-x-0 top-0 w-full text-gray-900 bg-gray-50 shadow">
+<header class="z-30 sticky inset-x-0 top-0 w-full text-gray-900 bg-gray-50 shadow">
     <nav class="container flex items-center justify-between px-4 sm:px-6 py-4 mx-auto">
         <a
             href="{{ route('index') }}"
             class="flex items-center hocus:text-green-500 space-x-2"
         >
-            <x-logo class="w-auto h-14 mx-auto text-green-600 transform -my-4" />
+            <x-logo class="w-auto h-8 md:h-14 mx-auto text-green-600 transform -my-4" />
 
-            <span class="text-2xl font-semibold">
+            <span class="text-2xl font-semibold whitespace-no-wrap">
                 {{ config('app.name') }}
             </span>
         </a>

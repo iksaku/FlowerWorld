@@ -53,16 +53,19 @@ class Shop extends Model
 
     public function owner()
     {
+        /* Obtiene la cuenta a la que pertenece la tienda */
         return $this->belongsTo(User::class, 'owner_id');
     }
 
     public function products()
     {
+        /* Obtiene los productos que pertenecen a la tienda */
         return $this->hasMany(Product::class);
     }
 
     protected function getLogoAttribute()
     {
+        /* Obtiene la URL del logo de la tienda */
         return asset('img/' . Str::slug($this->name) . '.png');
     }
 }

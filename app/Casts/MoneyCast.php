@@ -19,6 +19,7 @@ class MoneyCast implements CastsAttributes
      */
     public function get($model, $key, $value, $attributes)
     {
+        /* Convierte la cantidad entera en moneda nacional */
         return Money::MXN($value);
     }
 
@@ -33,10 +34,12 @@ class MoneyCast implements CastsAttributes
      */
     public function set($model, $key, $value, $attributes)
     {
+        /* Si se provee una moneda nacional, se convierte en un numero entero */
         if ($value instanceof Money) {
             return $value->getAmount();
         }
 
+        /* Si se provee un numero entero, se guarda como tal */
         return $value;
     }
 }

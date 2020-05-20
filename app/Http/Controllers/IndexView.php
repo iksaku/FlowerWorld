@@ -10,6 +10,7 @@ class IndexView extends Controller
 {
     public function __invoke(): View
     {
+        /* Enlista todas las tiendas en existencia */
         return view('index', [
             'shops' => Shop::all()
         ]);

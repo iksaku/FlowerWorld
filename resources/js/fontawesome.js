@@ -1,6 +1,6 @@
 import {library, dom} from '@fortawesome/fontawesome-svg-core'
 import {
-    faBars,
+    faBars, faCalendarCheck,
     faCheckCircle,
     faEnvelope,
     faMapMarkerAlt,
@@ -19,7 +19,8 @@ library.add(
     faFacebookSquare, faWhatsappSquare, faInstagramSquare, faTwitterSquare,
     faMapMarkerAlt, faPhone, faEnvelope,
     faUser, faBars, faShoppingBag,
-    faCheckCircle, faTimes, faSyncAlt
+    faCheckCircle, faTimes, faSyncAlt,
+    faCalendarCheck
 )
 
 dom.watch()

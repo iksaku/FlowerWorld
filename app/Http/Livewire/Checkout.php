@@ -7,6 +7,7 @@ use App\Http\Livewire\Modules\WithShoppingCart;
 use App\Invoice;
 use App\Product;
 use App\ShoppingCarProductPivot;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Money\Money;
@@ -15,7 +16,8 @@ use Money\Money;
  * Class Checkout
  * @package App\Http\Livewire
  *
- * @property-read Product[] $products
+ * @property-read Product[] $shoppingCart
+ * @property-read Collection $products
  * @property-read Money $subTotal
  */
 class Checkout extends Component
@@ -71,7 +73,7 @@ class Checkout extends Component
         ]);
 
         $invoice->products()->saveMany(
-            $this->products
+            $this->shoppingCart
         );
 
         $user->shopping_cart()->detach();

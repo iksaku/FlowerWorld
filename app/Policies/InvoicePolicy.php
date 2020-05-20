@@ -18,10 +18,12 @@ class InvoicePolicy
      */
     public function viewAny(User $user)
     {
+        /* Si el usuario tiene rango de administrador, permite ver cualquier recibo */
         if ($user->is_admin) {
             return true;
         }
 
+        /* Si no es administrador, entonces permitir que se verifique si el recibo le pertenece */
         return null;
     }
 
@@ -34,6 +36,7 @@ class InvoicePolicy
      */
     public function view(User $user, Invoice $invoice)
     {
+        /* Se permitirá ver el recibo si le pertenece al usuario en cuestión */
         return $invoice->user->is($user);
     }
 }

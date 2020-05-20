@@ -47,11 +47,15 @@ class Invoice extends Model
 
     public function user()
     {
+        /* Obtiene el usuario dueño del recibo */
         return $this->belongsTo(User::class);
     }
 
     public function products()
     {
-        return $this->belongsToMany(Product::class);
+        /* Obtiene los productos presentes en el recibo */
+        return $this->belongsToMany(Product::class)
+            ->using(ShoppingCarProductPivot::class)
+            ->withPivot(['quantity']);
     }
 }

@@ -23,7 +23,6 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::post('logout', 'Auth\Logout')->name('logout');
-    Route::view('password/confirm', 'auth.passwords.confirm')->name('password.confirm');
 
     Route::prefix('checkout')->name('checkout.')->group(function () {
         Route::view('/', 'checkout')->name('index');

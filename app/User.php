@@ -55,16 +55,19 @@ class User extends Authenticatable
 
     public function invoices()
     {
+        /* Obtiene todos los recibos del usuario */
         return $this->hasMany(Invoice::class);
     }
 
     public function shop()
     {
+        /* Obtiene la tienda que le pertenece al usuario, en caso de ser dueño de alguna */
         return $this->hasOne(Shop::class, 'owner_id');
     }
 
     public function shopping_cart()
     {
+        /* Obtiene los productos en el carrito del usuario */
         return $this->belongsToMany(Product::class, 'shopping_carts')
             ->using(ShoppingCarProductPivot::class)
             ->withPivot(['quantity']);
