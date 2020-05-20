@@ -1,7 +1,7 @@
 <div xmlns:wire="http://www.w3.org/1999/xhtml">
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
         <a href="{{ route('index') }}">
-            <x-logo class="w-auto h-16 mx-auto text-green-600" />
+            <x-logo class="w-auto h-32 mx-auto text-green-600" />
         </a>
 
         <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900 leading-9">

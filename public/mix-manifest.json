@@ -1,7 +1,5 @@
 {
-    "/js/alpine.js": "/js/alpine.js?id=7c15b987edeaed124f4c",
-    "/css/app.css": "/css/app.css?id=7be47e6e079dab0488cf",
-    "/js/alpine.js.map": "/js/alpine.js.map?id=1b3a30cc4c16f21f6f3d",
-    "/js/fontawesome.js": "/js/fontawesome.js?id=163d0819fb28ed2d1030",
-    "/js/fontawesome.js.map": "/js/fontawesome.js.map?id=687b6a4f74af94f85816"
+    "/js/alpine.js": "/js/alpine.js",
+    "/css/app.css": "/css/app.css",
+    "/js/fontawesome.js": "/js/fontawesome.js"
 }

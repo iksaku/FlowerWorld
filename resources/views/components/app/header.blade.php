@@ -2,9 +2,13 @@
     <nav class="container flex items-center justify-between px-4 sm:px-6 py-4 mx-auto">
         <a
             href="{{ route('index') }}"
-            class="text-2xl font-semibold hocus:text-green-500"
+            class="flex items-center hocus:text-green-500 space-x-2"
         >
-            {{ config('app.name') }}
+            <x-logo class="w-auto h-14 mx-auto text-green-600 transform -my-4" />
+
+            <span class="text-2xl font-semibold">
+                {{ config('app.name') }}
+            </span>
         </a>
 
         <div class="flex items-center justify-end space-x-6 md:space-x-8">
